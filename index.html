@@ -41,6 +41,30 @@
     .container{ width:min(var(--max), 92vw); margin:0 auto; }
 
     /* ===== Header ===== */
+    /* ===== Header Logo ===== */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.brand-logo{
+  height:44px;
+  width:auto;
+  display:block;
+}
+
+.brand-text{
+  display:flex;
+  flex-direction:column;
+}
+
+/* スマホは少し小さく */
+@media (max-width: 920px){
+  .brand-logo{
+    height:36px;
+  }
+}
     header{
       position:sticky;
       top:0;
@@ -349,12 +373,12 @@
   <header>
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="トップへ">
-        <!-- ロゴ未完成のため未挿入 -->
-        <div>
-          <div class="name">Azzurre Cheer Dance School</div>
-          <div class="sub">楽しい。だから、成長する。</div>
-        </div>
-      </a>
+  <img src="assets/logo.png" alt="Azzurre Cheer Dance School ロゴ" class="brand-logo">
+  <div class="brand-text">
+    <div class="name">Azzurre Cheer Dance School</div>
+    <div class="sub">楽しい。だから、成長する。</div>
+  </div>
+</a>
 
       <nav aria-label="グローバルナビ">
         <a class="navlink" href="#points">スクールの特徴</a>
@@ -540,5 +564,6 @@
   </script>
 </body>
 </html>
+
 
 
